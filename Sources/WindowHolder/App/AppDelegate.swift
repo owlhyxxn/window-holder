@@ -17,7 +17,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     var autoSaveEnabled = true
 
     func applicationDidFinishLaunching(_ notification: Notification) {
-        ApplicationsInstaller.installIfNeeded()
+        SingleInstanceGuard.terminateIfAlreadyRunning()
+
+        ApplicationsInstaller.syncIfNeeded()
 
         _ = WindowManager.shared.isAccessibilityTrusted(prompt: true)
 
