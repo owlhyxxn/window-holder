@@ -1,8 +1,8 @@
 class WindowHolder < Formula
   desc "Menu bar app that restores window positions after macOS sleep/wake on multi-monitor setups"
   homepage "https://github.com/owlhyxxn/window-holder"
-  url "https://github.com/owlhyxxn/window-holder/archive/refs/tags/v1.2.0.tar.gz"
-  sha256 "fe15a4a9b45a50e773da276387148bb2800bb4e8b6e670d2c83a66c789ded5aa"
+  url "https://github.com/owlhyxxn/window-holder/archive/refs/tags/v1.2.1.tar.gz"
+  sha256 "4c5f6fbcfcc2ec3bacceed152b1122ab7a33aef899af3ca92489a57d83939c86"
   license "MIT"
   head "https://github.com/owlhyxxn/window-holder.git", branch: "main"
 
