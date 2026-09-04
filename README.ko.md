@@ -19,7 +19,25 @@
    기다렸다가(debounce, 최대 대기시간 있음) 복원하고, macOS가 다시 창을
    흐트러뜨릴 경우를 대비해 잠시 뒤 한 번 더 안전하게 재적용합니다.
 
-## 빌드 & 실행
+## 설치
+
+### Homebrew
+
+```bash
+brew tap owlhyxxn/window-holder https://github.com/owlhyxxn/window-holder
+brew install window-holder
+```
+
+`brew install`이 끝나면 Spotlight/Launchpad에 뜨게 하려면 `~/Applications`로
+복사하는 명령어를 안내해줍니다 (Homebrew 경로로의 심볼릭 링크는 Spotlight가
+안정적으로 인덱싱하지 않아서, 실제 복사본이 필요합니다). 복사 없이 바로
+실행만 하려면:
+
+```bash
+open $(brew --prefix)/opt/window-holder/WindowHolder.app
+```
+
+### 소스 빌드
 
 ```bash
 ./build.sh

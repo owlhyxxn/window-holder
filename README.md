@@ -24,7 +24,25 @@ back.
    (debounced, with a hard cutoff) before restoring, plus one safety
    re-apply shortly after in case macOS reshuffles things again.
 
-## Build & run
+## Install
+
+### Homebrew
+
+```bash
+brew tap owlhyxxn/window-holder https://github.com/owlhyxxn/window-holder
+brew install window-holder
+```
+
+`brew install` prints a one-time command to copy the app into
+`~/Applications` so it shows up in Spotlight and Launchpad (a plain
+symlink into the Homebrew prefix isn't reliably indexed by Spotlight).
+Or just run it directly without copying:
+
+```bash
+open $(brew --prefix)/opt/window-holder/WindowHolder.app
+```
+
+### From source
 
 ```bash
 ./build.sh
