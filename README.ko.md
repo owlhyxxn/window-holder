@@ -25,17 +25,23 @@
 
 ```bash
 brew tap owlhyxxn/window-holder https://github.com/owlhyxxn/window-holder
+brew trust owlhyxxn/window-holder
 brew install window-holder
 ```
 
-`brew install`이 끝나면 Spotlight/Launchpad에 뜨게 하려면 `~/Applications`로
-복사하는 명령어를 안내해줍니다 (Homebrew 경로로의 심볼릭 링크는 Spotlight가
-안정적으로 인덱싱하지 않아서, 실제 복사본이 필요합니다). 복사 없이 바로
-실행만 하려면:
+(`brew trust`는 Homebrew가 서드파티 tap에 대해 한 번 요구하는 신뢰 확인
+절차입니다 — 안 하면 `brew install`이 formula 로드를 거부합니다.)
+
+설치 후 한 번만 실행해주세요:
 
 ```bash
 open $(brew --prefix)/opt/window-holder/WindowHolder.app
 ```
+
+처음 실행하면 앱이 스스로 `~/Applications`에 자기 자신을 복사합니다
+(Homebrew 경로로의 심볼릭 링크는 Spotlight가 안정적으로 인덱싱하지 않아서,
+실제 복사본이 필요합니다). 그 이후로는 Spotlight나 Launchpad에서 바로
+실행할 수 있고, `brew upgrade` 후에도 자동으로 최신 복사본으로 갱신됩니다.
 
 ### 소스 빌드
 

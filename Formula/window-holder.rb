@@ -24,16 +24,15 @@ class WindowHolder < Formula
       WindowHolder.app was installed to:
         #{opt_prefix}/WindowHolder.app
 
-      To make it show up in Spotlight and Launchpad, copy it into
-      ~/Applications (Spotlight does not reliably index a symlink into
-      the Homebrew prefix, so a real copy is needed — repeat this after
-      each `brew upgrade`):
-        mkdir -p ~/Applications && cp -R #{opt_prefix}/WindowHolder.app ~/Applications/
-
-      Or just open it directly, without copying:
+      Open it once to get started:
         open #{opt_prefix}/WindowHolder.app
 
-      On first launch, macOS will ask for Accessibility permission
+      On first launch it copies itself into ~/Applications (Spotlight
+      does not reliably index a symlink into the Homebrew prefix), so
+      after that you can also launch it from Spotlight or Launchpad.
+      It re-copies itself automatically after a `brew upgrade` too.
+
+      On first launch, macOS will also ask for Accessibility permission
       (System Settings > Privacy & Security > Accessibility).
 
       To launch it automatically at login, open the menu bar icon's

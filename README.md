@@ -30,17 +30,23 @@ back.
 
 ```bash
 brew tap owlhyxxn/window-holder https://github.com/owlhyxxn/window-holder
+brew trust owlhyxxn/window-holder
 brew install window-holder
 ```
 
-`brew install` prints a one-time command to copy the app into
-`~/Applications` so it shows up in Spotlight and Launchpad (a plain
-symlink into the Homebrew prefix isn't reliably indexed by Spotlight).
-Or just run it directly without copying:
+(`brew trust` is a one-time confirmation Homebrew requires for third-party
+taps — without it, `brew install` refuses to load the formula.)
+
+Then open it once to get started:
 
 ```bash
 open $(brew --prefix)/opt/window-holder/WindowHolder.app
 ```
+
+On first launch it copies itself into `~/Applications` (Spotlight doesn't
+reliably index a symlink into the Homebrew prefix), so after that you can
+also launch it from Spotlight or Launchpad. It keeps that copy in sync
+automatically after a `brew upgrade`, too.
 
 ### From source
 

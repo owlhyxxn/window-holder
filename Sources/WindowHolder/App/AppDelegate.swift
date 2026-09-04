@@ -17,6 +17,8 @@ final class AppDelegate: NSObject, NSApplicationDelegate {
     var autoSaveEnabled = true
 
     func applicationDidFinishLaunching(_ notification: Notification) {
+        ApplicationsInstaller.installIfNeeded()
+
         _ = WindowManager.shared.isAccessibilityTrusted(prompt: true)
 
         statusBarController = StatusBarController(appDelegate: self)
