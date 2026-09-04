@@ -1,0 +1,4 @@
+.build/
+WindowHolder.app/
+.swiftpm/
+.DS_Store
